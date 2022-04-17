@@ -18,6 +18,12 @@ var credentials = {key: privateKey, cert: certificate};
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
+app.get('/p2p', function (req, res) {
+    res.sendFile(path.join(__dirname + '/p2p.html'));
+});
+app.get('/about', function (req, res) {
+    res.sendFile(path.join(__dirname + '/about.html'));
+});
 //http server
 var LANtesting='0.0.0.0';
 http.createServer(app).listen(PORT,function(){
